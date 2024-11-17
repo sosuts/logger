@@ -6,10 +6,9 @@ readme = "README.md"
 authors = [
     { name = "sosuts", email = "sosuke.utsunomiya@gmail.com" }
 ]
-requires-python = ">=3.12"
+requires-python = ">=3.9,<=3.13"
 dependencies = [
     "fastapi[standard]>=0.115.4",
-    "pytest-cov>=6.0.0",
     "sqlalchemy>=2.0.36",
 ]
 
@@ -27,6 +26,7 @@ dev-dependencies = [
     "requests>=2.32.3",
     "ruff>=0.7.3",
     "pre-commit>=4.0.1",
+    "pytest-cov>=6.0.0",
 ]
 
 [tool.mypy]

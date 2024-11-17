@@ -1,9 +1,9 @@
 from datetime import datetime
 from typing import Literal, Optional
 
-from sqlalchemy import Date, DateTime, ForeignKey, create_engine, event, func, update
+from sqlalchemy import ForeignKey, create_engine, event, func
 from sqlalchemy.engine import Engine
-from sqlalchemy.orm import DeclarativeBase, Mapped, Session, mapped_column, relationship
+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 
 
 @event.listens_for(Engine, "connect")
@@ -23,7 +23,7 @@ class Base(DeclarativeBase):
         return (
             f"{self.__class__.__name__}"
             # skip _sa_instance_state
-            f"({','.join(f'{k}={v}' for k, v in self.__dict__.items() if k != "_sa_instance_state")})"
+            f"({','.join(f'{k}={v}' for k, v in self.__dict__.items() if k != '_sa_instance_state')})"
         )
 
 

@@ -1,7 +1,5 @@
 from datetime import datetime
-from turtle import update
 
-from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from logger.model import Reagent, User

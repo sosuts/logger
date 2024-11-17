@@ -1,0 +1,9 @@
+env_list =  ["3.9", "3.10", "3.11", "3.12", "3.13"]
+
+[env_run_base]
+description = "run pytest"
+deps = [
+    "pytest",
+    "pytest-sugar"
+]
+commands = [["pytest", { replace = "posargs", default = ["tests"], extend = true }]]
