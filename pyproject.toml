@@ -1,0 +1,33 @@
+[project]
+name = "logger"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "sosuts", email = "sosuke.utsunomiya@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.115.4",
+    "pytest-cov>=6.0.0",
+    "sqlalchemy>=2.0.36",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "coverage>=7.6.4",
+    "ipykernel>=6.29.5",
+    "mypy>=1.13.0",
+    "pytest>=8.3.3",
+    "pytest-sugar>=1.0.0",
+    "requests>=2.32.3",
+    "ruff>=0.7.3",
+    "pre-commit>=4.0.1",
+]
+
+[tool.mypy]
+check-untyped-defs=true
